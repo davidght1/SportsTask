@@ -12,7 +12,7 @@ const requireAuth = async (req, res, next) => {
 
   try {
     // check if token is ok with our secret value
-    const { id } = jwt.verify(token, process.env.SECRET);
+    const { _id } = jwt.verify(token, process.env.SECRET);
 
     req.user = await User.findOne({ _id }).select("_id");
     next();
