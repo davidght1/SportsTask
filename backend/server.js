@@ -14,6 +14,7 @@ app.use(cors());
 
 //middleware
 app.use(express.json());
+app.use(bodyParser.json());
 
 app.use((req, res, next) => {
   next();
