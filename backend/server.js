@@ -10,12 +10,7 @@ const cors = require("cors");
 const app = express();
 
 //cors
-app.use(
-  cors({
-    origin: ["http://localhost:4000", "https://sports-task.vercel.app"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 //middleware
 app.use(express.json());
